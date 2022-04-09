@@ -1,13 +1,13 @@
 Recommenderd-  Try it through postman
 
 ###
-sign up user http://localhost:8000/users/signup
+sign up user POST http://localhost:8000/users/signup
 Content-Type: application/x-www-form-urlencoded
 email=s@gmail.com
 &password=123
 
 ### 
-sign in user to get token http://localhost:8000/users/login 
+sign in user to get token POST http://localhost:8000/users/login 
 Content-Type: application/x-www-form-urlencoded
 email=s@gmail.com
 &password=123
@@ -33,6 +33,7 @@ Content-Type: application/x-www-form-urlencoded
 name= avijit
 &Phone=8888564569
 This one used to add contacts
+
 ###
 DELETE http://localhost:8000/v1/contacts/622b61cc61442709d4ef85ed 
 this one for delete a contact

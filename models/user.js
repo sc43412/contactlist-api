@@ -1,8 +1,8 @@
 const {Schema,model} = require('mongoose');
 
 // creating schema that has name and quatity 
-const contactSchema = new Schema({
-    name:{
+const userSchema = new Schema({
+    email:{
         type:String,
         required:true
     },
@@ -14,5 +14,5 @@ const contactSchema = new Schema({
     timestamps:true
 })
 // conveting the schema into the model
-const Contact = model("Product",contactSchema);
-module.exports = Contact;
+const User = model("User",userSchema);
+module.exports = User;

@@ -3,16 +3,17 @@ const Contact = require("../models/contact");
 module.exports.create= async function(req,res){
            // here validating that req has name and phone no
            console.log("controller loaeded");
-    if(req.body.name && req.body.phone){
+          if(req.body.name && req.body.phone){
          // checking if phone no already exists  
-         let contact = await Contact.find({phone:req.body.phone})
+         let contact = await Contact.findOne({phone:req.body.phone})
+         console.log(contact);
          if(contact){
              return res.status(500).json({error:"phone no already exists"})
          }
            
         Contact.create(req.body)
         .then((contact)=>{
-            // responding with the created product data            
+            // responding with the created data            
             return res.status(200).json({contact:{
                 name:contact.name,
                 phone:contact.phone

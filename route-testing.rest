@@ -1,14 +1,42 @@
-GET http://localhost:8000/v1/contacts/listofcontacts 
+Recommenderd-  Try it through postman
 
+###
+sign up user http://localhost:8000/users/signup
+Content-Type: application/x-www-form-urlencoded
+email=s@gmail.com
+&password=123
+
+### 
+sign in user to get token http://localhost:8000/users/login 
+Content-Type: application/x-www-form-urlencoded
+email=s@gmail.com
+&password=123
+
+After That you wil get token
+add jwt Token to do crud operation on contact
+in header of postman put this one with every operation
+Content-Type: Headers
+key = Authorization
+value = Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MjUxYmNhNjRmZjJhOWE5ZDA0MjQ2M2MiLCJlbWFpbCI6InNjNDM0MTJAZ21haWwuY29tIiwicGFzc3dvcmQiOiI4MTU4MDU2MzQ3IiwiY3JlYXRlZEF0IjoiMjAyMi0wNC0wOVQxNzowNDozOC4wNzdaIiwidXBkYXRlZEF0IjoiMjAyMi0wNC0wOVQxNzowNDozOC4wNzdaIiwiX192IjowLCJpYXQiOjE2NDk1MjUwODcsImV4cCI6MTY0OTUyNjA4N30.RZrVkgCgjb2vvQe94RuC2fEq3-l4yPKHFRs91NrWTAM
+Bearer <add the token> follow the previous line syntax
+
+ ////// YOU NEED TO ADD Bearer Token WITH THIS 4 CRUD OPRATION REQUEST THAT ALL ARE BELOW .
+
+
+###
+GET http://localhost:8000/v1/contacts/listofcontacts 
+IT is used to get details all of the list.important - add bearer token with this request 
 ###
 POST http://localhost:8000/v1/contacts/create 
 Content-Type: application/x-www-form-urlencoded
 
 name= avijit
 &Phone=8888564569
+This one used to add contacts
+###
+DELETE http://localhost:8000/v1/contacts/622b61cc61442709d4ef85ed 
+this one for delete a contact
 
 ###
-DELETE http://localhost:8000/v1/products/622b61cc61442709d4ef85ed 
-
-###
-POST  http://localhost:8000/v1/products/622b61cc61442709d4ef85ed/update_phoneno/?phoneno=6285852100 
+POST  http://localhost:8000/v1/contacts/622b61cc61442709d4ef85ed/update_phoneno/?phoneno=6285852100 
+this one for update a contact.

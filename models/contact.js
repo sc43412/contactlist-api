@@ -1,6 +1,6 @@
 const {Schema,model} = require('mongoose');
 
-// creating schema that has name and quatity 
+// creating schema that has name and phoneno
 const contactSchema = new Schema({
     name:{
         type:String,

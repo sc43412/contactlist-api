@@ -1,0 +1,14 @@
+GET http://localhost:8000/v1/contacts/listofcontacts 
+
+###
+POST http://localhost:8000/v1/contacts/create 
+Content-Type: application/x-www-form-urlencoded
+
+name= avijit
+&Phone=8888564569
+
+###
+DELETE http://localhost:8000/v1/products/622b61cc61442709d4ef85ed 
+
+###
+POST  http://localhost:8000/v1/products/622b61cc61442709d4ef85ed/update_phoneno/?phoneno=6285852100 
